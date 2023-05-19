@@ -2,4 +2,3 @@ pandas
 Requests
 scikit_learn
 streamlit
-pickle5
