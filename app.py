@@ -1,5 +1,4 @@
 import streamlit as st
-import pickle5 as pickle
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -10,7 +9,7 @@ def fetch_poster(movie_id):
     data = response.json()
     return "https://image.tmdb.org/t/p/original/" + data['poster_path']
 
-df2 = pickle.load(open('movies.pkl', 'rb'))
+df2 = pd.read_pickle(open('movies.pkl', 'rb'))
 movies = df2['title'].values
 
 
